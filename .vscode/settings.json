@@ -1,0 +1,42 @@
+{
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/python;${env:PYTHONPATH}"
+    },
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/python"
+    ],
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.formatting.provider": "yapf",
+    "python.formatting.yapfArgs": [
+        "--style",
+        "{column_limit: 120}"
+    ],
+    "editor.formatOnSave": true,
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "C_Cpp.autocomplete": "disabled", // So you don't get autocomplete from both extensions.
+    "C_Cpp.errorSquiggles": "disabled", // So you don't get error squiggles from both extensions (clangd's seem to be more reliable anyway).
+    "clangd.path": "/usr/local/bin/clangd",
+    "clangd.onConfigChanged": "restart",
+    "clangd.restartAfterCrash": true,
+    "clangd.checkUpdates": true,
+    "clangd.arguments": [
+        "-log=verbose",
+        "-pretty",
+        "--clang-tidy",
+        "--cross-file-rename",
+        "--background-index",
+        "--all-scopes-completion",
+        "--completion-style=detailed",
+        "--header-insertion=iwyu",
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--query-driver=/usr/bin/g++"
+    ],
+    "ffi_navigator.pythonpath": "/home/hxf0223/anaconda3/bin/python3",
+    "files.associations": {
+        "optional": "cpp",
+        "functional": "cpp",
+        "utility": "cpp"
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+}
