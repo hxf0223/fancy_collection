@@ -9,6 +9,6 @@
 
 - [random](https://github.com/effolkronium/random)
 
-## cxxopt
+## cxxopt -- 轻量级替换boost opt
 
 - [cxxopt](https://github.com/jarro2783/cxxopts)
