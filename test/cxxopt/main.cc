@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) {
   cxxopts::ParseResult result;
   try {
     result = options.parse(argc, argv);
-  } catch (std::exception &e) {
+  } catch (std::exception &e) { // catch invalid format
     std::cout << e.what() << std::endl;
     std::cout << options.help() << std::endl;
     exit(0);
